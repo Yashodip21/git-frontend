@@ -89,7 +89,7 @@ const Dashboard = () => {
 
     // Fetch Suggested Repositories
     try {
-      const response = await fetch(`16.171.154.247:3002/repo/all`);
+      const response = await fetch(`http://16.171.154.247:3002/repo/all`);
       if (response.ok) {
         const data = await response.json();
         setSuggestedRepositories(Array.isArray(data) ? data : []);

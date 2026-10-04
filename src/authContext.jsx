@@ -13,7 +13,7 @@ export const AuthProvider =({children})=>{
     const fetchUserProfile = async (userId) => {
       if (!userId) return;
       try {
-        const response = await fetch(`http://localhost:3002/userProfile/${userId}`);
+        const response = await fetch(`http://16.171.154.247:3002/userProfile/${userId}`);
         if (response.ok) {
           const data = await response.json();
           if (data && data.profileImage) {

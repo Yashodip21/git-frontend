@@ -31,7 +31,7 @@ const CreateRepository = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("16.171.154.247:3002/repo/create", {
+      const response = await fetch("http://16.171.154.247:3002/repo/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
