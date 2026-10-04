@@ -1,0 +1,235 @@
+/* GitHub-Inspired Follow Button */
+.gh-follow-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: #21262d;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 16px;
+  transition: all 0.18s ease-in-out;
+}
+
+.gh-follow-btn:hover {
+  background-color: #30363d;
+  color: #ffffff;
+  border-color: #8b949e;
+}
+
+.gh-follow-btn.following {
+  background-color: #21262d;
+  color: #c9d1d9;
+  border-color: #30363d;
+}
+
+.gh-follow-btn.following.unfollow-hover {
+  background-color: rgba(248, 81, 73, 0.15);
+  color: #f85149;
+  border-color: rgba(248, 81, 73, 0.4);
+}
+
+.gh-follow-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.gh-follow-btn-sm {
+  background-color: #21262d;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  white-space: nowrap;
+}
+
+.gh-follow-btn-sm:hover {
+  background-color: #30363d;
+  color: #ffffff;
+  border-color: #8b949e;
+}
+
+.gh-follow-btn-sm.following {
+  background-color: #21262d;
+  color: #8b949e;
+  border-color: #30363d;
+}
+
+.gh-follow-btn-sm.following:hover {
+  background-color: rgba(248, 81, 73, 0.15);
+  color: #f85149;
+  border-color: rgba(248, 81, 73, 0.4);
+}
+
+/* Follower count clickables */
+.gh-follow-count-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #8b949e;
+  font-size: 13px;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.gh-follow-count-btn:hover {
+  color: #58a6ff;
+  text-decoration: underline;
+}
+
+.gh-follow-count-btn strong {
+  color: #f0f6fc;
+}
+
+/* Followers / Following Modal */
+.gh-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(1, 4, 9, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+  backdrop-filter: blur(2px);
+}
+
+.gh-modal-box {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(1, 4, 9, 0.6);
+  animation: ghModalIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes ghModalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.gh-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-bottom: 1px solid #30363d;
+}
+
+.gh-modal-header h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #f0f6fc;
+  margin: 0;
+}
+
+.gh-modal-close {
+  background: transparent;
+  border: none;
+  color: #8b949e;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.gh-modal-close:hover {
+  color: #f0f6fc;
+}
+
+.gh-modal-body {
+  overflow-y: auto;
+  max-height: 60vh;
+  padding: 8px 0;
+}
+
+.gh-follow-user-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #21262d;
+  transition: background-color 0.15s;
+}
+
+.gh-follow-user-card:last-child {
+  border-bottom: none;
+}
+
+.gh-follow-user-card:hover {
+  background-color: #21262d;
+}
+
+.gh-follow-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.gh-follow-avatar-link {
+  flex-shrink: 0;
+}
+
+.gh-follow-avatar-sm {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #30363d;
+}
+
+.gh-follow-avatar-sm-fallback {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #30363d;
+  color: #8b949e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gh-follow-user-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #58a6ff;
+  text-decoration: none;
+  display: block;
+}
+
+.gh-follow-user-name:hover {
+  text-decoration: underline;
+}
+
+.gh-follow-user-email {
+  font-size: 12px;
+  color: #8b949e;
+  margin: 2px 0 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 220px;
+}

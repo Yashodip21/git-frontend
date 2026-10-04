@@ -1,0 +1,360 @@
+/* ==============================
+   AUTHENTICATION PAGE
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+.login-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    padding: 24px 16px 40px;
+
+    font-family: "Asap", sans-serif;
+    color: #f0f6fc;
+
+    background:
+        radial-gradient(ellipse at top,
+            rgba(35, 134, 54, 0.12),
+            transparent 55%),
+        #0d1117;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ==============================
+   LOGO
+================================ */
+
+.login-logo-container {
+    width: 100%;
+    padding: 24px 0 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-login {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+
+    transition: transform 0.3s ease;
+}
+
+.logo-login:hover {
+    transform: scale(1.08);
+}
+
+/* ==============================
+   MAIN WRAPPER
+================================ */
+
+.login-box-wrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}
+
+.login-heading {
+    width: 100%;
+    text-align: center;
+}
+
+.login-heading h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -0.7px;
+    color: #f0f6fc;
+}
+
+/* ==============================
+   AUTH CARD
+================================ */
+
+.login-box {
+    width: 100%;
+    padding: 30px;
+
+    background: rgba(22, 27, 34, 0.95);
+    border: 1px solid #30363d;
+    border-radius: 14px;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.25),
+        0 1px 0 rgba(255, 255, 255, 0.02) inset;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 22px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.login-box:hover {
+    border-color: #484f58;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Each input group */
+
+.login-box>div {
+    width: 100%;
+}
+
+/* ==============================
+   LABELS
+================================ */
+
+.label {
+    display: block;
+    margin-bottom: 9px;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: #e6edf3;
+}
+
+/* ==============================
+   INPUT FIELDS
+================================ */
+
+.input {
+    display: block;
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+
+    font-family: inherit;
+    font-size: 14px;
+    color: #f0f6fc;
+
+    background: #0d1117;
+    border: 1px solid #3d444d;
+    border-radius: 8px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.input::placeholder {
+    color: #7d8590;
+}
+
+.input:hover {
+    border-color: #6e7681;
+}
+
+.input:focus {
+    background: #0d1117;
+    border-color: #2f81f7;
+
+    box-shadow:
+        0 0 0 3px rgba(47, 129, 247, 0.2);
+}
+
+/* ==============================
+   BUTTONS
+================================ */
+
+.submit-btn,
+.login-btn,
+.signup-button {
+    width: 100%;
+    min-height: 44px;
+    padding: 0 16px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+
+    background: linear-gradient(135deg,
+            #238636,
+            #2ea043);
+
+    border: 1px solid rgba(240, 246, 252, 0.1);
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.submit-btn:hover,
+.login-btn:hover,
+.signup-button:hover {
+    background: linear-gradient(135deg,
+            #2ea043,
+            #3fb950);
+
+    box-shadow: 0 5px 18px rgba(46, 160, 67, 0.2);
+}
+
+.submit-btn:active,
+.login-btn:active,
+.signup-button:active {
+    transform: scale(0.98);
+}
+
+.submit-btn:disabled,
+.login-btn:disabled,
+.signup-button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* ==============================
+   LOGIN / SIGNUP FOOTER
+================================ */
+
+.pass-box {
+    width: 100%;
+    min-height: 60px;
+    padding: 18px 16px;
+
+    background: rgba(22, 27, 34, 0.55);
+    border: 1px solid #30363d;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: 14px;
+    color: #c9d1d9;
+}
+
+.pass-box p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.pass-box a {
+    color: #4493f8;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.pass-box a:hover {
+    color: #79c0ff;
+    text-decoration: underline;
+}
+
+/* ==============================
+   PASSKEY SIGN-IN
+================================ */
+
+.passkey-signin {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 90px;
+    margin: 0;
+    padding: 18px;
+
+    background: rgba(22, 27, 34, 0.65);
+    border: 1px solid #30363d;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.passkey,
+.signup {
+    color: #4493f8;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.passkey:hover,
+.signup:hover {
+    color: #79c0ff;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================ */
+
+@media screen and (max-width: 480px) {
+    .login-wrapper {
+        padding: 16px 16px 30px;
+    }
+
+    .login-logo-container {
+        padding: 20px 0;
+    }
+
+    .login-box-wrapper {
+        max-width: 100%;
+        gap: 18px;
+    }
+
+    .login-heading h1 {
+        font-size: 25px;
+    }
+
+    .login-box {
+        padding: 22px 18px;
+        gap: 20px;
+    }
+
+    .input,
+    .login-btn,
+    .submit-btn,
+    .signup-button {
+        min-height: 44px;
+    }
+
+    .pass-box {
+        padding: 16px 12px;
+    }
+}
+
+/* ==============================
+   ACCESSIBILITY
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+.login-heading h1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    color: #f0f6fc;
+    margin: 20px 0 24px;
+}
