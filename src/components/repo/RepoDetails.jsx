@@ -57,7 +57,7 @@ const RepoDetails = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`http://localhost:3002/repo/${id}`);
+      const response = await fetch(`16.171.154.247 :3002/repo/${id}`);
       if (!response.ok) {
         if (response.status === 404) setError("Repository not found (404)");
         else if (response.status === 400) setError("Invalid Repository ID (400)");

@@ -43,7 +43,7 @@ const Profile = () => {
     setStarredLoading(true);
     setStarredError(null);
     try {
-      const starredRes = await axios.get(`http://localhost:3002/user/starred?userId=${userId}`);
+      const starredRes = await axios.get(`16.171.154.247:3002/user/starred?userId=${userId}`);
       if (starredRes.data && Array.isArray(starredRes.data.repositories)) {
         setStarredRepositories(starredRes.data.repositories);
       } else {

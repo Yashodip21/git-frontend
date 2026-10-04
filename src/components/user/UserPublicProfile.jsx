@@ -43,7 +43,7 @@ const UserPublicProfile = () => {
     }
 
     try {
-      const repoRes = await axios.get(`http://localhost:3002/repo/user/${targetUserId}`);
+      const repoRes = await axios.get(`16.171.154.247:3002/repo/user/${targetUserId}`);
       if (repoRes.data && Array.isArray(repoRes.data.repositories)) {
         setRepositories(repoRes.data.repositories);
       }
